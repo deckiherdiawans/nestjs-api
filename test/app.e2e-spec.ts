@@ -128,13 +128,13 @@ describe("App e2e", () => {
                 description: "Learn the TypeScript programming language in this crash course for beginners. By the end of this course you will understand all modern TypeScript features."
             }
 
-            it('Should edit bookmark.', () => {
-                return pactum.spec().patch("/bookmarks/{id}").withPathParams('id', '$S{bookmarkId}').withHeaders({ Authorization: "Bearer $S{userAt}" }).withBody(dto).expectStatus(200).inspect()
+            it('Should edit bookmark by id.', () => {
+                return pactum.spec().patch("/bookmarks/{id}").withPathParams('id', '$S{bookmarkId}').withHeaders({ Authorization: "Bearer $S{userAt}" }).withBody(dto).expectStatus(200)
             })
         })
 
         describe('Delete bookmark by id.', () => {
-            it('Should delete bookmark.', () => {
+            it('Should delete bookmark by id.', () => {
                 return pactum.spec().delete("/bookmarks/{id}").withPathParams('id', '$S{bookmarkId}').withHeaders({ Authorization: "Bearer $S{userAt}" }).expectStatus(200)
             })
         })

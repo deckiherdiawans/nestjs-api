@@ -31,7 +31,7 @@ export class BookmarkController {
         return this.bookmarkService.createBookmark(userId, dto)
     }
 
-    @Patch()
+    @Patch(':id')
     editBookmarkById(
         @GetUser('id') userId: number,
         @Param('id', ParseIntPipe) bookmarkId: number,
