@@ -2,7 +2,7 @@ import { Body, Controller, Delete, Get, Param, ParseIntPipe, Patch, Post, UseGua
 import { GetUser } from '../auth/decorator'
 import { JwtGuard } from '../auth/guard'
 import { BookmarkService } from './bookmark.service'
-import { CreateBookmarkDto } from './dto'
+import { CreateBookmarkDto } from './dto/create-bookmark.dto'
 import { EditBookmarkDto } from './dto/edit-bookmark.dto'
 
 @UseGuards(JwtGuard)
