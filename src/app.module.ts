@@ -3,7 +3,6 @@ import { Module } from '@nestjs/common'
 import { AuthModule } from './auth/auth.module'
 import { UserModule } from './user/user.module'
 import { BookmarkModule } from './bookmark/bookmark.module'
-import { InvArticleModule } from './invarticle/invarticle.module'
 import { PrismaModule } from './prisma/prisma.module'
 
 @Module({
@@ -12,7 +11,6 @@ import { PrismaModule } from './prisma/prisma.module'
         AuthModule,
         UserModule,
         BookmarkModule,
-        InvArticleModule,
         PrismaModule
     ]
 })
