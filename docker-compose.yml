@@ -1,24 +1,24 @@
 version: '3.8'
 services:
-    dev-db:
-        image: postgres:14
-        ports:
-            - 5432
-        environment:
-            POSTGRES_USER: postgres
-            POSTGRES_PASSWORD: postgres
-            POSTGRES_DB: nest
-        networks:
-            - revota
-    test-db:
-        image: postgres:14
-        ports:
-            - 5432
-        environment:
-            POSTGRES_USER: postgres
-            POSTGRES_PASSWORD: postgres
-            POSTGRES_DB: nest-test
-        networks:
-            - revota
+  dev-db:
+    image: postgres:14
+    ports:
+      - 5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nest
+    networks:
+      - revota
+  test-db:
+    image: postgres:14
+    ports:
+      - 5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nest-test
+    networks:
+      - revota
 networks:
-    revota:
+  revota:
